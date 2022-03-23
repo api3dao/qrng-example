@@ -1,0 +1,8 @@
+{
+  "myApi": {
+    "airnode": "0x1851503A25f0A5404Bb06573b462D6387166FF1A",
+    "endpointIdUint256": "0xfb6d017bb87991b7495f563db3c8cf59ff87b09781947bb1e417006ad7f55a78",
+    "endpointIdUint256Array": "0x27cc2713e7f968e4e86ed274a051a5c8aaee9cca66946f23af6f29ecea9704c3",
+    "xpub": "xpub6DHNvJKyvB3WcHLogdPczhX7dtcNxLiTsXsQrJEswthghzubGZPm59ZYQDPipuNWnJurKqih37pk64pnXkVF526myacYRgcdakGSqMqg1XA"
+  }
+}
