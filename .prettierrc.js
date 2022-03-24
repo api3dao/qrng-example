@@ -15,7 +15,7 @@ module.exports = {
     {
       files: '*.sol',
       options: {
-        compiler: '0.8.12',
+        compiler: '0.8.9',
         printWidth: 80,
         tabWidth: 4,
         useTabs: false,
