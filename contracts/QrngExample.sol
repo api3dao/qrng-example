@@ -24,13 +24,11 @@ contract QrngExample is RrpRequester {
 
     mapping(bytes32 => bool) public expectingRequestWithIdToBeFulfilled;
 
-    /// @dev The contract sponsors itself, meaning that it can make requests
+    /// @dev RrpRequester sponsors itself, meaning that it can make requests
     /// that will be fulfilled by its sponsor wallet. See the Airnode protocol
     /// docs about sponsorship for more information.
     /// @param _airnodeRrp Airnode RRP contract address
-    constructor(address _airnodeRrp) RrpRequester(_airnodeRrp) {
-        airnodeRrp.setSponsorshipStatus(address(this), true);
-    }
+    constructor(address _airnodeRrp) RrpRequester(_airnodeRrp) {}
 
     /// @notice Sets parameters used in requesting QRNG services
     /// @dev No access control is implemented here for convenience. This is not
