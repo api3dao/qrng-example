@@ -1,8 +1,8 @@
 {
   "myApi": {
-    "airnode": "0x1851503A25f0A5404Bb06573b462D6387166FF1A",
+    "airnode": "0xCc20e41c3311A76bF9c6A6c02BCA377755b55451",
     "endpointIdUint256": "0xfb6d017bb87991b7495f563db3c8cf59ff87b09781947bb1e417006ad7f55a78",
     "endpointIdUint256Array": "0x27cc2713e7f968e4e86ed274a051a5c8aaee9cca66946f23af6f29ecea9704c3",
-    "xpub": "xpub6DHNvJKyvB3WcHLogdPczhX7dtcNxLiTsXsQrJEswthghzubGZPm59ZYQDPipuNWnJurKqih37pk64pnXkVF526myacYRgcdakGSqMqg1XA"
+    "xpub": "xpub6D52qCq42BMYVHqyGRHUVqAhHUeSe72PcD7FiALR7i22ctH6Yd95AizoohdpwmpobRqJWbmmPP5uH2NozeTjbg3YYtHKGSFAWEJ2KXAHSxh"
   }
 }
