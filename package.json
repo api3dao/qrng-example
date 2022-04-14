@@ -9,6 +9,7 @@
   "scripts": {
     "build": "hardhat compile",
     "deploy": "hardhat deploy --network $NETWORK",
+    "fund": "hardhat deploy --tags fund --network $NETWORK",
     "prettier": "prettier --write \"./**/*.{json,js,md,sol}\"",
     "request-uint256": "hardhat run scripts/requestUint256.js --network $NETWORK",
     "request-uint256-array": "hardhat run scripts/requestUint256Array.js --network $NETWORK"

@@ -19,14 +19,6 @@ module.exports = async () => {
     qrngExample.address
   );
 
-  // Fund the sponsor wallet for it to be able to respond to requests
-  const ethValue = '0.1';
-  await account.sendTransaction({
-    to: sponsorWalletAddress,
-    value: hre.ethers.utils.parseEther(ethValue),
-  });
-  console.log(`Funded sponsor wallet at ${sponsorWalletAddress} with ${ethValue} ETH`);
-
   // Set the parameters that will be used to make Airnode requests
   await qrngExample.setRequestParameters(
     apiData.airnode,
@@ -36,3 +28,5 @@ module.exports = async () => {
   );
   console.log('Set request parameters');
 };
+module.exports.tags = ['setup'];
+module.exports.dependencies = ['deploy'];
