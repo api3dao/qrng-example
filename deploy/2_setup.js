@@ -20,13 +20,19 @@ module.exports = async () => {
   );
 
   // Set the parameters that will be used to make Airnode requests
-  await qrngExample.setRequestParameters(
+  const receipt = await qrngExample.setRequestParameters(
     apiData.airnode,
     apiData.endpointIdUint256,
     apiData.endpointIdUint256Array,
     sponsorWalletAddress
   );
-  console.log('Set request parameters');
+  console.log('Setting request parameters...');
+  await new Promise((resolve) =>
+    hre.ethers.provider.once(receipt.hash, () => {
+      resolve();
+    })
+  );
+  console.log('Request parameters set');
 };
 module.exports.tags = ['setup'];
 module.exports.dependencies = ['deploy'];

@@ -21,11 +21,17 @@ module.exports = async () => {
 
   // Fund the sponsor wallet for it to be able to respond to requests
   const ethValue = '0.1';
-  await account.sendTransaction({
+  const receipt = await account.sendTransaction({
     to: sponsorWalletAddress,
     value: hre.ethers.utils.parseEther(ethValue),
   });
-  console.log(`Funded sponsor wallet at ${sponsorWalletAddress} with ${ethValue} ETH`);
+  console.log(`Funding sponsor wallet at ${sponsorWalletAddress} with ${ethValue} ETH...`);
+  await new Promise((resolve) =>
+    hre.ethers.provider.once(receipt.hash, () => {
+      resolve();
+    })
+  );
+  console.log('Sponsor wallet funded');
 };
 module.exports.tags = ['fund'];
 module.exports.dependencies = ['deploy'];
