@@ -20,7 +20,7 @@ module.exports = async () => {
   );
 
   // Fund the sponsor wallet for it to be able to respond to requests
-  const ethValue = '0.05';
+  const ethValue = '0.1';
   await account.sendTransaction({
     to: sponsorWalletAddress,
     value: hre.ethers.utils.parseEther(ethValue),
