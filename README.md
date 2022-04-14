@@ -21,9 +21,9 @@ cp credentials.example.json credentials.json
 # ...and populate credentials.json
 ```
 
-3. Deploy the contract, send a transaction to fund the sponsor wallet and another one to set the request parameters with
-   the command below. `<NETWORK>` is the name of the network, e.g., `rinkeby`. See the code in `deploy/` for more
-   information.
+3. Deploy the contract, send a transaction to set the request parameters and another one to fund the sponsor wallet with
+   0.1 ETH (or what the native currency is) with the command below. `<NETWORK>` is the name of the network, e.g.,
+   `rinkeby`. See the code in `deploy/` for more information.
 
 ```sh
 NETWORK=<NETWORK> yarn deploy
@@ -41,6 +41,13 @@ NETWORK=<NETWORK> yarn request-uint256
 
 ```sh
 NETWORK=<NETWORK> yarn request-uint256-array
+```
+
+The amount the sponsor wallet is automatically funded with may not be enough on some chains. To fund the sponsor wallet
+again, run
+
+```sh
+NETWORK=<NETWORK> yarn fund
 ```
 
 ## QRNG Airnodes
