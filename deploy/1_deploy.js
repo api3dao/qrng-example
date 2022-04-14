@@ -5,7 +5,7 @@ module.exports = async () => {
   // We are getting the AirnodeRrp address from @api3/airnode-protocol
   // Alternatively, you can get it from the docs
   // https://docs.api3.org/airnode/latest/reference/airnode-addresses.html
-  const airnodeRrpAddress = '0x3B35250Ca54C1Fb8c83D48F21231ef6e4fb9f79D';
+  const airnodeRrpAddress = airnodeProtocol.AirnodeRrpAddresses[await hre.getChainId()];
 
   const qrngExample = await hre.deployments.deploy('QrngExample', {
     args: [airnodeRrpAddress],
