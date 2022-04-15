@@ -20,12 +20,18 @@ module.exports = async () => {
   );
 
   // Fund the sponsor wallet for it to be able to respond to requests
-  const ethValue = '0.1';
+  // The amount is not hard-coded to work across chains
+  const transferGasCost = await account.estimateGas({
+    to: account.address,
+    value: 1,
+  });
+  const gasPrice = await hre.ethers.provider.getGasPrice();
+  const value = transferGasCost.mul(gasPrice).mul(10);
   const receipt = await account.sendTransaction({
     to: sponsorWalletAddress,
-    value: hre.ethers.utils.parseEther(ethValue),
+    value: value,
   });
-  console.log(`Funding sponsor wallet at ${sponsorWalletAddress} with ${ethValue} ETH...`);
+  console.log(`Funding sponsor wallet at ${sponsorWalletAddress} with ${hre.ethers.utils.formatEther(value)} ETH...`);
   await new Promise((resolve) =>
     hre.ethers.provider.once(receipt.hash, () => {
       resolve();
