@@ -1,6 +1,6 @@
 # QRNG Example
 
-> An example project that demonstrates the usage of the Airnode request–response protocol to receive QRNG services
+> An example project that demonstrates the usage of the Airnode request–response protocol to receive API3 QRNG services
 
 This README documents this specific QRNG example implementation. For more general information, refer to the
 [API3 QRNG docs](https://docs.api3.org/qrng/).
@@ -48,6 +48,10 @@ If you want to fund the sponsor wallet again, run
 ```sh
 NETWORK=<NETWORK> yarn fund
 ```
+
+The sponsor can
+[request a withdrawal](https://docs.api3.org/airnode/latest/reference/packages/admin-cli.html#request-withdrawal) from
+the sponsor wallet, yet this functionality is not implemented in the example contract for brevity.
 
 ## QRNG Airnodes
 
