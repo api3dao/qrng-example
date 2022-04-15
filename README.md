@@ -26,27 +26,27 @@ cp credentials.example.json credentials.json
    information.
 
 ```sh
-NETWORK=<NETWORK> yarn deploy
+NETWORK=<NETWORK> yarn run:deploy
 ```
 
 4. Send a transaction to request a `uint256` and print it once it is recieved. See the code in `scripts/` for more
    information.
 
 ```sh
-NETWORK=<NETWORK> yarn request-uint256
+NETWORK=<NETWORK> yarn request:uint256
 ```
 
 5. Send a transaction to request a `uint256[]` with 5 elements and print it once it is recieved. See the code in
    `scripts/` for more information.
 
 ```sh
-NETWORK=<NETWORK> yarn request-uint256-array
+NETWORK=<NETWORK> yarn request:uint256-array
 ```
 
 If you want to fund the sponsor wallet again, run
 
 ```sh
-NETWORK=<NETWORK> yarn fund
+NETWORK=<NETWORK> yarn run:fund
 ```
 
 The sponsor can
