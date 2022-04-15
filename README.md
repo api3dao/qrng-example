@@ -3,7 +3,7 @@
 > An example project that demonstrates the usage of the Airnode request–response protocol to receive QRNG services
 
 This README documents this specific QRNG example implementation. For more general information, refer to the
-[QRNG docs](TODO).
+[API3 QRNG docs](https://docs.api3.org/qrng/).
 
 ## Instructions
 
