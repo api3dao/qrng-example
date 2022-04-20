@@ -26,7 +26,7 @@ cp credentials.example.json credentials.json
    information.
 
 ```sh
-NETWORK=<NETWORK> yarn run:deploy
+NETWORK=<NETWORK> yarn deploy
 ```
 
 4. Send a transaction to request a `uint256` and print it once it is recieved. See the code in `scripts/` for more
@@ -48,6 +48,8 @@ If you want to fund the sponsor wallet again, run
 ```sh
 NETWORK=<NETWORK> yarn run:fund
 ```
+
+or send funds to sponsor wallet address displayed on the terminal manually.
 
 The sponsor can
 [request a withdrawal](https://docs.api3.org/airnode/latest/reference/packages/admin-cli.html#request-withdrawal) from
