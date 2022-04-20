@@ -7,7 +7,7 @@ async function main() {
   // Make a request...
   const size = 5;
   const receipt = await qrngExample.makeRequestUint256Array(size);
-  console.log(`Sent a request transaction for ${size} numbers, waiting for it to be confirmed...`);
+  console.log(`Created a request transaction for ${size} numbers, waiting for it to be confirmed...`);
   // and read the logs once it gets confirmed to get the request ID
   const requestId = await new Promise((resolve) =>
     hre.ethers.provider.once(receipt.hash, (tx) => {
