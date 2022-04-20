@@ -22,11 +22,11 @@ module.exports = async () => {
   // Fund the sponsor wallet for it to be able to respond to requests
   // The amount is not hard-coded to work across chains
   const transferGasCost = await account.estimateGas({
-    to: account.address,
+    to: sponsorWalletAddress,
     value: 1,
   });
   const gasPrice = await hre.ethers.provider.getGasPrice();
-  const value = transferGasCost.mul(gasPrice).mul(10);
+  const value = transferGasCost.mul(gasPrice).mul(50);
   const receipt = await account.sendTransaction({
     to: sponsorWalletAddress,
     value: value,
@@ -40,4 +40,3 @@ module.exports = async () => {
   console.log('Sponsor wallet funded');
 };
 module.exports.tags = ['fund'];
-module.exports.dependencies = ['deploy'];

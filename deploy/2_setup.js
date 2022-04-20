@@ -35,4 +35,3 @@ module.exports = async () => {
   console.log('Request parameters set');
 };
 module.exports.tags = ['setup'];
-module.exports.dependencies = ['deploy'];

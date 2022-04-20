@@ -20,7 +20,7 @@ async function main() {
   console.log(`Transaction is confirmed, request ID is ${requestId}`);
 
   // Wait for the fulfillment transaction to be confirmed and read the logs to get the random number
-  console.log('Waiting for the fulfillment transaction to be confirmed...');
+  console.log('Waiting for the fulfillment transaction...');
   const log = await new Promise((resolve) =>
     hre.ethers.provider.once(qrngExample.filters.ReceivedUint256Array(requestId, null), resolve)
   );
