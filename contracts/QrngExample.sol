@@ -1,12 +1,12 @@
 //SPDX-License-Identifier: MIT
 pragma solidity 0.8.9;
-import "@api3/airnode-protocol/contracts/rrp/requesters/RrpRequester.sol";
+import "@api3/airnode-protocol/contracts/rrp/requesters/RrpRequesterV0.sol";
 
 /// @title Example contract that uses Airnode RRP to receive QRNG services
 /// @notice This contract is not secure. Do not use it in production. Refer to
 /// the contract for more information.
 /// @dev See README.md for more information.
-contract QrngExample is RrpRequester {
+contract QrngExample is RrpRequesterV0 {
     event RequestedUint256(bytes32 indexed requestId);
     event ReceivedUint256(bytes32 indexed requestId, uint256 response);
     event RequestedUint256Array(bytes32 indexed requestId, uint256 size);
@@ -28,7 +28,7 @@ contract QrngExample is RrpRequester {
     /// that will be fulfilled by its sponsor wallet. See the Airnode protocol
     /// docs about sponsorship for more information.
     /// @param _airnodeRrp Airnode RRP contract address
-    constructor(address _airnodeRrp) RrpRequester(_airnodeRrp) {}
+    constructor(address _airnodeRrp) RrpRequesterV0(_airnodeRrp) {}
 
     /// @notice Sets parameters used in requesting QRNG services
     /// @dev No access control is implemented here for convenience. This is not

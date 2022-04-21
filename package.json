@@ -15,11 +15,10 @@
     "prettier": "prettier --write \"./**/*.{json,js,md,sol}\""
   },
   "devDependencies": {
-    "@api3/airnode-admin": "^0.5.0",
-    "@api3/airnode-protocol": "^0.5.0",
+    "@api3/airnode-admin": "^0.6.0",
+    "@api3/airnode-protocol": "^0.6.0",
     "@nomiclabs/hardhat-ethers": "^2.0.4",
     "@nomiclabs/hardhat-waffle": "^2.0.2",
-    "@openzeppelin/contracts": "4.4.2",
     "chai": "^4.3.6",
     "ethereum-waffle": "^3.4.0",
     "ethers": "^5.5.4",
