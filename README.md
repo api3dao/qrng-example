@@ -46,7 +46,7 @@ NETWORK=<NETWORK> yarn request:uint256-array
 If you want to fund the sponsor wallet again, run
 
 ```sh
-NETWORK=<NETWORK> yarn run:fund
+NETWORK=<NETWORK> yarn fund
 ```
 
 or send funds to sponsor wallet address displayed on the terminal manually.
