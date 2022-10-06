@@ -22,7 +22,7 @@ cp credentials.example.json credentials.json
 ```
 
 3. Deploy the contract, send a transaction to set the request parameters and another one to fund the sponsor wallet with
-   the command below. `<NETWORK>` is the name of the network, e.g., `rinkeby`. See the code in `deploy/` for more
+   the command below. `<NETWORK>` is the name of the network, e.g., `goerli`. See the code in `deploy/` for more
    information.
 
 ```sh

@@ -3,8 +3,6 @@ const airnodeAdmin = require('@api3/airnode-admin');
 const apis = require('../data/apis.json');
 
 const amounts = {
-  ropsten: { value: 0.1, unit: 'ETH' },
-  rinkeby: { value: 0.1, unit: 'ETH' },
   goerli: { value: 0.1, unit: 'ETH' },
   kovan: { value: 0.1, unit: 'ETH' },
   mainnet: { value: 0.05, unit: 'ETH' },
