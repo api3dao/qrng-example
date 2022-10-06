@@ -4,7 +4,6 @@ const apis = require('../data/apis.json');
 
 const amounts = {
   goerli: { value: 0.1, unit: 'ETH' },
-  kovan: { value: 0.1, unit: 'ETH' },
   mainnet: { value: 0.05, unit: 'ETH' },
   arbitrum: { value: 0.01, unit: 'ETH' },
   avalanche: { value: 0.2, unit: 'AVAX' },
