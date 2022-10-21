@@ -13,7 +13,7 @@ This README documents this specific QRNG example implementation. For more genera
 yarn
 ```
 
-2. Provide the blockhain provider URL and the wallet mnemonic for the network you will work with. The wallet needs to be
+2. Provide the blockchain provider URL and the wallet mnemonic for the network you will work with. The wallet needs to be
    funded.
 
 ```sh
@@ -29,14 +29,14 @@ cp credentials.example.json credentials.json
 NETWORK=<NETWORK> yarn deploy
 ```
 
-4. Send a transaction to request a `uint256` and print it once it is recieved. See the code in `scripts/` for more
+4. Send a transaction to request a `uint256` and print it once it is received. See the code in `scripts/` for more
    information.
 
 ```sh
 NETWORK=<NETWORK> yarn request:uint256
 ```
 
-5. Send a transaction to request a `uint256[]` with 5 elements and print it once it is recieved. See the code in
+5. Send a transaction to request a `uint256[]` with 5 elements and print it once it is received. See the code in
    `scripts/` for more information.
 
 ```sh
@@ -96,7 +96,7 @@ information about the sponsorship scheme, see the
 
 ### ABI-encoding
 
-Fulfillment data is ABI-encoded, and in `bytes` type. It is assumed that you know the expected repsonse schema
+Fulfillment data is ABI-encoded, and in `bytes` type. It is assumed that you know the expected response schema
 associated with the endpoint that you use to make your request. For example, `makeRequestUint256()` uses an endpoint
 that will return `(uint256)`, while `makeRequestUint256Array()` uses an endpoint that will return `(uint256[])`. Then,
 the respective fulfillment function should decode the response using `abi.decode()` with the correct schema.
