@@ -8,6 +8,7 @@
   },
   "scripts": {
     "build": "hardhat compile",
+    "test": "hardhat test --parallel",
     "deploy": "hardhat deploy --network $NETWORK",
     "fund": "hardhat deploy --tags fund --network $NETWORK",
     "request:uint256": "hardhat run scripts/requestUint256.js --network $NETWORK",

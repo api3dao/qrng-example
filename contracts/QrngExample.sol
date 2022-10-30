@@ -84,6 +84,7 @@ contract QrngExample is RrpRequesterV0 {
     function fulfillUint256(bytes32 requestId, bytes calldata data)
         external
         onlyAirnodeRrp
+        returns (uint256)
     {
         require(
             expectingRequestWithIdToBeFulfilled[requestId],
@@ -93,6 +94,7 @@ contract QrngExample is RrpRequesterV0 {
         uint256 qrngUint256 = abi.decode(data, (uint256));
         // Do what you want with `qrngUint256` here...
         emit ReceivedUint256(requestId, qrngUint256);
+        return qrngUint256 * 5;
     }
 
     /// @notice Requests a `uint256[]`
@@ -119,6 +121,7 @@ contract QrngExample is RrpRequesterV0 {
     function fulfillUint256Array(bytes32 requestId, bytes calldata data)
         external
         onlyAirnodeRrp
+        returns (uint256[] memory)
     {
         require(
             expectingRequestWithIdToBeFulfilled[requestId],
@@ -128,5 +131,6 @@ contract QrngExample is RrpRequesterV0 {
         uint256[] memory qrngUint256Array = abi.decode(data, (uint256[]));
         // Do what you want with `qrngUint256Array` here...
         emit ReceivedUint256Array(requestId, qrngUint256Array);
+        return qrngUint256Array;
     }
 }
