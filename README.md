@@ -13,8 +13,8 @@ This README documents this specific QRNG example implementation. For more genera
 yarn
 ```
 
-2. Provide the blockchain provider URL and the wallet mnemonic for the network you will work with. The wallet needs to be
-   funded.
+2. Provide the blockchain provider URL and the wallet mnemonic for the network you will work with. The wallet needs to
+   be funded.
 
 ```sh
 cp credentials.example.json credentials.json
