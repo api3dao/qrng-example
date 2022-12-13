@@ -18,7 +18,7 @@ const amounts = {
   rsk: { value: 0.0001, unit: 'RBTC' },
   goerli: { value: 0.1, unit: 'ETH' },
   sepolia: { value: 0.05, unit: 'SEP' },
-  rsktestnet: { value: 0.001, unit: 'RBTC' },
+  'rsk-testnet': { value: 0.001, unit: 'RBTC' },
   'gnosis-testnet': { value: 0.05, unit: 'xDAI' },
   'bsc-testnet': { value: 0.005, unit: 'BNB' },
   'optimism-testnet': { value: 0.05, unit: 'ETH' },
