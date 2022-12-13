@@ -55,9 +55,9 @@ The sponsor can
 [request a withdrawal](https://docs.api3.org/airnode/latest/reference/packages/admin-cli.html#request-withdrawal) from
 the sponsor wallet, yet this functionality is not implemented in the example contract for brevity.
 
-## QRNG Airnodes
+## QRNG & byog Airnodes
 
-The QRNG Airnodes supported by this example are documented in `data/apis.json`.
+The QRNG and byog Airnodes supported by this example are documented in `scripts/apis.js`.
 
 ## QrngExample contract documentation
 
@@ -70,14 +70,14 @@ The contract uses the following parameters to make requests:
   `uint256[]`
 - `sponsorWallet`: Sponsor wallet address derived from the Airnode extended public key and the sponsor address
 
-`airnode` and `endpointId` are read from `data/apis.json`, see below for how to derive `sponsorWallet`. For further
+`airnode` and `endpointId` are read from `scripts/apis.js`, see below for how to derive `sponsorWallet`. For further
 information, see the [docs on Airnode RRP concepts](https://docs.api3.org/airnode/latest/concepts/).
 
 ### Sponsor wallet
 
 QrngExample sets its own sponsorship status as `true` in its constructor. This means that QrngExample is its own
 sponsor. You can derive the sponsor wallet using the following command (you can find `<XPUB>` and `<AIRNODE>` in
-`data/apis.json`):
+`scripts/apis.js`):
 
 ```sh
 npx @api3/airnode-admin derive-sponsor-wallet-address \
