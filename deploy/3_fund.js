@@ -1,9 +1,8 @@
 const hre = require('hardhat');
 const airnodeAdmin = require('@api3/airnode-admin');
-const apis = require('../data/apis.json');
+const { getApi } = require('../scripts/apis.js');
 
 const amounts = {
-  goerli: { value: 0.1, unit: 'ETH' },
   mainnet: { value: 0.05, unit: 'ETH' },
   arbitrum: { value: 0.01, unit: 'ETH' },
   avalanche: { value: 0.2, unit: 'AVAX' },
@@ -17,10 +16,22 @@ const amounts = {
   optimism: { value: 0.01, unit: 'ETH' },
   polygon: { value: 10, unit: 'MATIC' },
   rsk: { value: 0.0001, unit: 'RBTC' },
+  goerli: { value: 0.1, unit: 'ETH' },
+  sepolia: { value: 0.05, unit: 'SEP' },
+  'rsk-testnet': { value: 0.001, unit: 'RBTC' },
+  'gnosis-testnet': { value: 0.05, unit: 'xDAI' },
+  'bsc-testnet': { value: 0.005, unit: 'BNB' },
+  'optimism-testnet': { value: 0.05, unit: 'ETH' },
+  'moonbase-testnet': { value: 0.1, unit: 'GLMR' }, //
+  'fantom-testnet': { value: 0.5, unit: 'FTM' },
+  'avalanche-testnet': { value: 0.3, unit: 'AVAX' },
+  'polygon-testnet': { value: 0.05, unit: 'MATIC' },
+  'milkomeda-testnet': { value: 0.5, unit: 'milkADA' },
+  'arbitrum-testnet': { value: 0.01, unit: 'ETH' },
 };
 
 module.exports = async () => {
-  const apiData = apis['ANU Quantum Random Numbers'];
+  const apiData = getApi(hre.network);
   const account = (await hre.ethers.getSigners())[0];
   const QrngExample = await hre.deployments.get('QrngExample');
   const qrngExample = new hre.ethers.Contract(QrngExample.address, QrngExample.abi, account);

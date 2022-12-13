@@ -1,9 +1,9 @@
 const hre = require('hardhat');
 const airnodeAdmin = require('@api3/airnode-admin');
-const apis = require('../data/apis.json');
+const { getApi } = require('../scripts/apis.js');
 
 module.exports = async () => {
-  const apiData = apis['ANU Quantum Random Numbers'];
+  const apiData = getApi(hre.network);
   const account = (await hre.ethers.getSigners())[0];
   const QrngExample = await hre.deployments.get('QrngExample');
   const qrngExample = new hre.ethers.Contract(QrngExample.address, QrngExample.abi, account);
