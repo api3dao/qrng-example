@@ -13,7 +13,7 @@ This README documents this specific QRNG example implementation. For more genera
 yarn
 ```
 
-2. Provide the blockchain provider URL and the wallet mnemonic for the network you will work with. The wallet needs to
+2. Provide the blockchain provider URL and the wallet mnemonic for the network you will work with (Only networks with [AirnodeRRPv0 deployment](https://github.com/api3dao/airnode/tree/master/packages/airnode-protocol/deployments) are supported).  The wallet needs to
    be funded.
 
 ```sh
