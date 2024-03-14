@@ -55,9 +55,9 @@ The sponsor can
 [request a withdrawal](https://docs.api3.org/airnode/latest/reference/packages/admin-cli.html#request-withdrawal) from
 the sponsor wallet, yet this functionality is not implemented in the example contract for brevity.
 
-## QRNG & byog Airnodes
+## ANU, Quintessence and Testnet Random Number Airnode
 
-The QRNG and byog Airnodes supported by this example are documented in `scripts/apis.js`.
+The ANU, Quintessence and Testnet Random Number Airnodes supported by this example are documented in `scripts/apis.js`.
 
 ## QrngExample contract documentation
 
